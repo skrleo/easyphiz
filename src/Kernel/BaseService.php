@@ -59,9 +59,8 @@ class BaseService extends AbstractConfig implements ConfigInterface
         $headers = $this->getHeaders($signature, $nonceStr, $timestamp);
 
         // 判断是测试环境还是正式环境
-        $baseUrl = $this->config['is_debug'] ? 'https://pay-dev.phizapp.cn:10443' : 'https://pay-dev.phizapp.cn:10443';
+        $baseUrl = $this->config['is_debug'] ? 'https://pay-dev.phizapp.cn:10443' : 'https://payment.phiz.chat';
 
-        var_dump("url:" . $baseUrl . $url);
         curl_setopt($ch, CURLOPT_URL, $baseUrl . $url);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
