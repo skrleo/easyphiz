@@ -1,6 +1,6 @@
 {
     "name": "skrleo/easyphiz",
-    "description": "Pacote de extens?o PhizPay php simples e fácil de usar.",
+    "description": "一个简单的PhizPay SDK扩展包.",
     "keywords": [
         "phizpay",
         "phizpay-sdk"
@@ -9,14 +9,13 @@
     "authors": [
         {
             "name": "rio",
-            "email": "13035809409@163.com"
+            "email": "skrleo@163.com"
         }
     ],
     "require": {
         "php": ">=7.2",
         "ext-fileinfo": "*",
-        "ext-openssl": "*",
-        "guzzlehttp/guzzle": "^7.8"
+        "ext-openssl": "*"
     },
     "autoload": {
         "psr-4": {

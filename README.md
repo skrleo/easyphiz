@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-composer require skrleo/easyphiz -vvv
+composer require skrleo/easyphiz
 ```
 
 ## 使用示例
@@ -31,7 +31,8 @@ $config = array(
     'mchid' => '1900009191',
     'serial_no' => '5157F09EFDC096DE15EBE81A47057A7232F1B8E1',
 
-    'cert_path' => 'path/to/xxx.pem', // XXX: 绝对路径！！！！
+    'is_debug' => true,                // 是否开启调试模式，开启的话会走测试环境
+    'cert_path' => 'path/to/xxx.pem',  // XXX: 绝对路径！！！！
 );
 
 $response = Factory::Order($config)->unify(array(
