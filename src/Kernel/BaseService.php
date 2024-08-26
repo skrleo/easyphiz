@@ -1,4 +1,8 @@
 <?php
+/*
+ * @author: Rio
+ * @Date: 2024-04-29 10:56:52
+ */
 namespace PhizPay\Kernel;
 
 use PhizPay\Kernel\Contracts\ConfigInterface;
@@ -59,7 +63,7 @@ class BaseService extends AbstractConfig implements ConfigInterface
         $headers = $this->getHeaders($signature, $nonceStr, $timestamp);
 
         // 判断是测试环境还是正式环境
-        $baseUrl = $this->config['is_debug'] ? 'https://pay-dev.phizapp.cn:10443' : 'https://payment.phiz.chat';
+        $baseUrl = $this->config['is_debug'] ? 'https://pay-dev.xyue.zip:10443' : 'https://payment.phiz.chat';
 
         curl_setopt($ch, CURLOPT_URL, $baseUrl . $url);
         curl_setopt($ch, CURLOPT_HEADER, true);
@@ -108,7 +112,6 @@ class BaseService extends AbstractConfig implements ConfigInterface
 
         $encryptedData = '';
         openssl_sign($signData, $encryptedData, $privateKey, OPENSSL_ALGO_SHA256);
-
         return array($nonceStr, $timestamp, base64_encode($encryptedData));
     }
 

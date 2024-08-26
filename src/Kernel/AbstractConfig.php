@@ -6,6 +6,8 @@
 
 namespace PhizPay\Kernel;
 
+use PhizPay\Kernel\Exceptions\InvalidArgumentException;
+
 /**
  * AbstractConfig类
  */

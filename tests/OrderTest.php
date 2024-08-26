@@ -15,11 +15,12 @@ class OrderTest extends TestCase
     public function testUnify()
     {
         $config = array(
-            'appid' => '6490171c3b17b00001f52197',
-            'mchid' => '1900009191',
-            'serial_no' => '5157F09EFDC096DE15EBE81A47057A7232F1B8E1',
+            'appid' => '662f08a9d13b7b00015fbdbd',
+            'mchid' => 'merchno',
+            'serial_no' => '206ECAD6C0CB931EF19E384C505D07400F0C56AB',
 
-            'cert_path' => 'D:\powerbank\package_builder\easyphiz\doc\657032b7216265.163385334216.pem',
+            'is_debug' => true,
+            'cert_path' => 'D:\powerbank\package_builder\easyphiz\doc\merchno_private_key.pem',
         );
 
         $response = Factory::Order($config)->unify(array(
@@ -59,6 +60,7 @@ class OrderTest extends TestCase
             'mchid' => '1900009191',
             'serial_no' => '5157F09EFDC096DE15EBE81A47057A7232F1B8E1',
 
+            'is_debug' => true,
             'cert_path' => 'D:\powerbank\package_builder\easyphiz\doc\657032b7216265.163385334216.pem'
         );
 
@@ -76,6 +78,7 @@ class OrderTest extends TestCase
             'mchid' => '1900009191',
             'serial_no' => '5157F09EFDC096DE15EBE81A47057A7232F1B8E1',
 
+            'is_debug' => true,
             'cert_path' => 'D:\powerbank\package_builder\easyphiz\doc\657032b7216265.163385334216.pem'
         );
 
